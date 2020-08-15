@@ -6,7 +6,7 @@ namespace LunchBuddies.Restaurants
 {
     class Restaurant
     {
-        public Type Name { get; set; }
+        public string RestaurantName { get; set; }
 
         private List<string> RestaurantNames = new List<string>();
 
@@ -33,11 +33,10 @@ namespace LunchBuddies.Restaurants
             this.addNames();
         }
 
-        public void displayCompanyName()
+        public void changeCompanyName()
         {
             int rand = _random.Next(RestaurantNames.Count);
-
-            Console.WriteLine($"{RestaurantNames[rand]}");
+            RestaurantName = RestaurantNames[rand];
         }
 
     }

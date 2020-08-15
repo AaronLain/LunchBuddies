@@ -19,19 +19,50 @@ namespace LunchBuddies.Buddies
 
         public void eat()
         {
-            displayCompanyName();
+            changeCompanyName();
+            Console.WriteLine($"{FirstName} {LastName} is at {RestaurantName}\r\n");
+            
         }
 
         public void eat(string food)
         {
-            Console.WriteLine($"{FirstName} {LastName} had {food} for lunch!");
-
+            Console.WriteLine($"{FirstName} {LastName} had {food} for lunch!\r\n");
         }
 
         public void eat(List<Buddy> companions)
         {
-            companions.AddRange(companions);
+            changeCompanyName();
 
+            Console.WriteLine($"{FirstName} {LastName} is at {RestaurantName} with: ");
+           
+            foreach (var i in companions)
+            {
+                if (i != this)
+                {
+                    Console.WriteLine($" - {i.FirstName}");
+                }
+            }
+            
+            Console.WriteLine();
+
+        }
+
+        public void eat(string food, List<Buddy> companions)
+        {
+            changeCompanyName();
+
+            Console.WriteLine($"{FirstName} {LastName} is eating {food} at {RestaurantName} with: ");
+
+            foreach (var i in companions)
+            {
+                if (i != this)
+                {
+                    Console.WriteLine($" - {i.FirstName}");
+                }
+                
+            }
+            
+            Console.WriteLine();
         }
 
 
