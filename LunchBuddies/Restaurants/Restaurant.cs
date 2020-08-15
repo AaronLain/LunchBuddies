@@ -33,7 +33,7 @@ namespace LunchBuddies.Restaurants
             this.addNames();
         }
 
-        public void displayName()
+        public void displayCompanyName()
         {
             int rand = _random.Next(RestaurantNames.Count);
 

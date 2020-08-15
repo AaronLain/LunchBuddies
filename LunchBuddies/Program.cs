@@ -9,10 +9,10 @@ namespace LunchBuddies
         {
             var food = new Restaurant();
 
-            food.displayName();
-            food.displayName();
-            food.displayName();
-            food.displayName();
+            food.displayCompanyName();
+            food.displayCompanyName();
+            food.displayCompanyName();
+            food.displayCompanyName();
         }
     }
 }
